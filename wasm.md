@@ -77,3 +77,8 @@ Error: strconv.ParseUint: parsing "1.234": invalid syntax
 $ wasmd query wasm code-info 18446744073709551616
 Error: strconv.ParseUint: parsing "18446744073709551616": value out of range 
 ```
+
+```
+
+```
+
