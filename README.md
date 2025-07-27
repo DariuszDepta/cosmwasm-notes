@@ -4,13 +4,15 @@
 
 ## Maintenence scope
 
-| Repository | Component |
-|------------|-----------|
-| [cosmwasm] |           |
-| [cw-plus]  |           |
+| Repository      | Component |
+|-----------------|-----------|
+| [cosmwasm]      |           |
+| [cw-plus]       |           |
+| [cw-multi-test] |           |
 
 [cosmwasm]: https://github.com/CosmWasm/cosmwasm
 [cw-plus]: https://github.com/CosmWasm/cw-plus
+[cw-multi-test]: https://github.com/CosmWasm/cw-multi-test
 
 ## Security policy
 
