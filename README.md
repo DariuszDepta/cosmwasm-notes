@@ -16,3 +16,5 @@ Please see the [Advisories] for its security policy.
 
 [Advisories]: https://github.com/CosmWasm/advisories/blob/main/SECURITY.md
 ```
+
+Related issues: [\#1](https://github.com/DariuszDepta/hqcw/issues/1)
