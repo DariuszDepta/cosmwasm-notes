@@ -7,8 +7,10 @@
 | Repository | Component |
 |------------|-----------|
 | [cosmwasm] |           |
+| [cw-plus]  |           |
 
 [cosmwasm]: https://github.com/CosmWasm/cosmwasm
+[cw-plus]: https://github.com/CosmWasm/cw-plus
 
 ## Security policy
 
