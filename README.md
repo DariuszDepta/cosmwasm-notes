@@ -38,7 +38,7 @@ Only released functionalities should be mentioned in CHANGELOG.md.
 
 ## License
 
-Each repository should have a LICENCE and NOTICE files.
+Each repository should have a **LICENSE** and **NOTICE** files.
 At the end of the README file should be the following text: 
 
 ```text
