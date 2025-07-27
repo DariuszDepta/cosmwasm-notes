@@ -2,6 +2,14 @@
 
 > Rules for high-quality CosmWasm development.
 
+## Maintenence scope
+
+| Repository | Component |
+|------------|-----------|
+| [cosmwasm] |           |
+
+[cosmwasm]: https://github.com/CosmWasm/cosmwasm
+
 ## Security policy
 
 Each repository should include a file named **SECURITY.md** placed in the root directory.
