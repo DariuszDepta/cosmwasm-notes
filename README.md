@@ -26,3 +26,8 @@ Please see the [Advisories] for its security policy.
 ```
 
 Related issues: [\#1](https://github.com/DariuszDepta/hqcw/issues/1)
+
+## Unified CHANGELOG
+
+Changelog SHOULD NOT contain `Unreleased` section.
+Only released functionalities should be mentioned in CHANGELOG.md.
