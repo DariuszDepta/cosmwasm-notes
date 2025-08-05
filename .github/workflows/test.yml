@@ -1,0 +1,22 @@
+name: test
+
+on: [ push ]
+
+env:
+  RELEASED_COSMWASM_CHECK_VERSION: 3.0
+
+jobs:
+  stable:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: 1.82.0
+          targets: wasm32-unknown-unknown
+
+      - name: Install most recent released cosmwasm-check
+        run: cargo install cosmwasm-check@~"$RELEASED_COSMWASM_CHECK_VERSION" --locked --force
+
+      - name: Display cosmwasm-check version
+        run: cosmwasm-check --version
