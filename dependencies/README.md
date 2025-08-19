@@ -45,10 +45,9 @@ graph BT
     F --> D
     G --> B
     K --> J
-    K --> B
     B --> L
     D --> L
-    B --> J
+    J --> B
 ```
 
 
