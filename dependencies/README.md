@@ -11,5 +11,5 @@ flowchart BT
     C --> D[Result one]
     C --> E[Result two]
     
-    style A fill:#f96,stroke:#000000
+    style A fill:#2e7d32,stroke:#388e3c,stroke-width:3px
 ```
