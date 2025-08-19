@@ -1,6 +1,6 @@
 name: test
 
-on: [ push ]
+on: [ pull_request_review ]
 
 env:
   COSMWASM_CHECK_VERSION: 3.0.1
