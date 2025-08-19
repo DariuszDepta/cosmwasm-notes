@@ -1,5 +1,7 @@
 # Dependencies
 
+## All maintained dependencies
+
 ```mermaid
 ---
 config:
@@ -19,6 +21,9 @@ flowchart BT
     D("`**cosmwasm-vm**
         3.0.1`")
         
+    F("`**cosmwasm-vm-derive**
+        3.0.1`")    
+        
     E("`**wasmd**
         0.61.0`")        
     
@@ -29,4 +34,5 @@ flowchart BT
     C --> D
     B --> D
     D --> E
+    F --> D
 ```
