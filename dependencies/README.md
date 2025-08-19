@@ -1,6 +1,6 @@
 # Dependencies
 
-## All maintained dependencies
+## CosmWasm dependencies
 
 ```mermaid
 ---
@@ -8,7 +8,7 @@ config:
   theme: 'forest'
 ---
 
-flowchart BT
+graph BT
     A("`**cosmwasm-core**
         3.0.1`")
         
@@ -38,17 +38,19 @@ flowchart BT
 
     K("`**cosmwasm-schema-derive**
         3.0.1`")
+        
+    L("`**cosmwasm-check**
+        3.0.1`")
+        
+    M("`**go-gen**
+        0.1.0`")    
 
-    W("`**wasmd**
-        0.61.0`")        
-    
     A --> B
     A --> C
     A --> D
     C --> B
     C --> D
     B --> D
-    D --> W
     F --> D
     G --> B
     H --> B
@@ -56,4 +58,8 @@ flowchart BT
     K --> J
     K --> B
     H --> J
+    B --> L
+    D --> L
+    B --> M
+    B --> J
 ```
