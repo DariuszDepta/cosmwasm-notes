@@ -17,9 +17,16 @@ flowchart BT
         3.0.1`")
         
     D("`**cosmwasm-vm**
-        3.0.1`")    
+        3.0.1`")
+        
+    E("`**wasmd**
+        0.61.0`")        
     
     A --> B
     A --> C
     A --> D
+    C --> B
+    C --> D
+    B --> D
+    D --> E
 ```
