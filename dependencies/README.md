@@ -22,9 +22,24 @@ flowchart BT
         3.0.1`")
         
     F("`**cosmwasm-vm-derive**
+        3.0.1`")
+        
+    G("`**cosmwasm-derive**
         3.0.1`")    
         
-    E("`**wasmd**
+    H("`**cw-schema**
+        3.0.1`")
+
+    I("`**cw-schema-derive**
+        3.0.1`")
+
+    J("`**cosmwasm-schema**
+        3.0.1`")
+
+    K("`**cosmwasm-schema-derive**
+        3.0.1`")
+
+    W("`**wasmd**
         0.61.0`")        
     
     A --> B
@@ -33,6 +48,12 @@ flowchart BT
     C --> B
     C --> D
     B --> D
-    D --> E
+    D --> W
     F --> D
+    G --> B
+    H --> B
+    I --> H
+    K --> J
+    K --> B
+    H --> J
 ```
