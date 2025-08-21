@@ -24,6 +24,10 @@ This convention is practical because:
 The versions of crates under development on the `main` branch should use the planned release version number
 with a **`-dev`** suffix. If such a crate is accidentally published, the suffix makes it easy to identify
 and immediately **yank** on [crates.io](https://crates.io).
+Another reason why the **`-dev`** suffix should be used is the fact, that using previously released version
+number is misleading, because after making a single change to `main` branch is not a released version anymore.
+Using plain planned release version is also misleading, because this version may not be ready yet.
+So, version under development must have **`-dev`** suffix. 
 
 Changes to the source code on the `main` branch must be made through **pull requests** based on separate branches.
 
