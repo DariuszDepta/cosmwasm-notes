@@ -115,4 +115,4 @@ graph BT
     B --> J
 ```
 
-![dependencies](./dependencies.svg)
+![dependencies](./cosmwasm-dependencies.svg)
