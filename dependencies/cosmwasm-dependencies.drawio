@@ -103,7 +103,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="vACNibe5N-CeRTmWkf9M-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.303;entryY=0.997;entryDx=0;entryDy=0;strokeColor=#999999;entryPerimeter=0;startSize=5;endSize=5;" edge="1" parent="1" source="jCbWclXcDCK_UydNv-eQ-1" target="vACNibe5N-CeRTmWkf9M-1">
+        <mxCell id="vACNibe5N-CeRTmWkf9M-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.303;entryY=0.997;entryDx=0;entryDy=0;strokeColor=#999999;entryPerimeter=0;startSize=5;endSize=5;" parent="1" source="jCbWclXcDCK_UydNv-eQ-1" target="vACNibe5N-CeRTmWkf9M-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="415" y="130" />
@@ -133,7 +133,7 @@
         <mxCell id="jCbWclXcDCK_UydNv-eQ-5" value="&lt;b&gt;cosmwasm-vm-derive&lt;/b&gt;&lt;div&gt;3.0.2&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;glass=0;" parent="1" vertex="1">
           <mxGeometry x="107.5" y="230" width="145" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="vACNibe5N-CeRTmWkf9M-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.671;entryY=0.994;entryDx=0;entryDy=0;strokeColor=#999999;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;entryPerimeter=0;startSize=5;endSize=5;" edge="1" parent="1" source="jCbWclXcDCK_UydNv-eQ-8" target="vACNibe5N-CeRTmWkf9M-1">
+        <mxCell id="vACNibe5N-CeRTmWkf9M-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.671;entryY=0.994;entryDx=0;entryDy=0;strokeColor=#999999;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=classic;entryPerimeter=0;startSize=5;endSize=5;" parent="1" source="jCbWclXcDCK_UydNv-eQ-8" target="vACNibe5N-CeRTmWkf9M-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="460" y="205" />
@@ -160,7 +160,7 @@
         <mxCell id="jCbWclXcDCK_UydNv-eQ-18" value="&lt;b&gt;cw-schema-derive&lt;/b&gt;&lt;div&gt;3.0.2&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;shadow=1;glass=0;" parent="1" vertex="1">
           <mxGeometry x="587.5" y="490" width="115" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="vACNibe5N-CeRTmWkf9M-1" value="&lt;b&gt;go-gen&lt;/b&gt;&lt;div&gt;0.1.0&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;shadow=1;" vertex="1" parent="1">
+        <mxCell id="vACNibe5N-CeRTmWkf9M-1" value="&lt;b&gt;go-gen&lt;/b&gt;&lt;div&gt;0.1.0&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;shadow=1;" parent="1" vertex="1">
           <mxGeometry x="419" y="60" width="120" height="50" as="geometry" />
         </mxCell>
       </root>
