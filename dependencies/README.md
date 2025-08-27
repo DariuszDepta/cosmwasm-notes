@@ -114,3 +114,5 @@ graph BT
     B --> M
     B --> J
 ```
+
+![dependencies](./dependencies.svg)
