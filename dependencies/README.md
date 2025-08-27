@@ -2,4 +2,4 @@
 
 ## Dependencies in cosmwasm repository
 
-![dependencies](./cosmwasm-dependencies.svg)
+<img alt="cosmwasm-dependencies" src="./cosmwasm-dependencies.svg" width="100%"/>
