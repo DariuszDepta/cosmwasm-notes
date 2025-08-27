@@ -10,4 +10,4 @@
 
 ## All dependencies
 
-<img alt="all-dependencies" src="./all-dependencies.svg" width="100%"/>
+<img alt="all-dependencies" src="./all-dependencies.svg" width="90%"/>
