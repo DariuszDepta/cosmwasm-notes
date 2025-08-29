@@ -74,7 +74,7 @@ Options we have:
 
 ---
 
-> [!NOTE]  
+> [!INFORMATION]
 > Template for a new risk entry.
 
 ## CWR-XXX
@@ -109,4 +109,5 @@ Options we have:
 
 ---
 
-![risk-priority-levels](./risk_priority_levels.svg)
+> [!INFORMATION]
+> ![risk-priority-levels](./risk_priority_levels.svg)
