@@ -3,6 +3,7 @@
 > [!IMPORTANT]  
 > The content in this repository represents my own opinions and understanding.
 > It does not represent the views of any employer, company, or organization I am associated with.
+> 
 > **All information is provided “as is” without any warranty or responsibility**. 
 
 ## Maintenance scope
