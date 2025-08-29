@@ -38,9 +38,9 @@ Checklist
 | Repository        | Updated |
 |-------------------|:-------:|
 | [cosmwasm]        |    ✅    |
-| [wasmvm]          |         |
-| [wasmd]           |         |
-| [serde-json-wasm] |         |
+| [wasmvm]          |    ✅    |
+| [wasmd]           |    ✅    |
+| [serde-json-wasm] |    ✅    |
 | [cw-plus]         |    ✅    |
 | [cw-storage-plus] |    ✅    |
 | [cw-minus]        |    ✅    |
