@@ -24,16 +24,16 @@ where `[apache-url]` and `[notice-url]` should be defined as the following:
 
 Checklist
 
-| Repository        | Updated | Remarks             |
-|-------------------|:-------:|---------------------|
-| [cosmwasm]        |    ✅    |                     |
-| [wasmvm]          |    ✅    |                     |
-| [wasmd]           |         | No NOTICE file      |
-| [serde-json-wasm] |    ✅    | Has double license. |
-| [cw-plus]         |    ✅    |                     |
-| [cw-storage-plus] |    ✅    |                     |
-| [cw-minus]        |    ✅    |                     |
-| [cw-multi-test]   |    ✅    |                     |
+| Repository        | Updated | Remarks         |
+|-------------------|:-------:|-----------------|
+| [cosmwasm]        |    ✅    |                 |
+| [wasmvm]          |    ✅    |                 |
+| [wasmd]           |    ✅    |                 |
+| [serde-json-wasm] |    ✅    | Double license. |
+| [cw-plus]         |    ✅    |                 |
+| [cw-storage-plus] |    ✅    |                 |
+| [cw-minus]        |    ✅    |                 |
+| [cw-multi-test]   |    ✅    |                 |
 
 [cosmwasm]: https://github.com/CosmWasm/cosmwasm
 [cw-minus]: https://github.com/CosmWasm/cw-minus
