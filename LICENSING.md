@@ -29,8 +29,8 @@ Checklist
 | [cosmwasm]        |    ✅    |                                  |
 | [wasmvm]          |         | Update NOTICE file to year 2025. |
 | [wasmd]           |         | No NOTICE file                   |
-| [serde-json-wasm] |         | No NOTICE file                   |
-| [cw-plus]         |         | Update NOTICE file to year 2025. |
+| [serde-json-wasm] |    ✅    |                                  |
+| [cw-plus]         |    ✅    |                                  |
 | [cw-storage-plus] |    ✅    |                                  |
 | [cw-minus]        |    ✅    |                                  |
 | [cw-multi-test]   |    ✅    |                                  |
