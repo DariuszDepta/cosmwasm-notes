@@ -61,3 +61,5 @@ where `[apache-url]` and `[notice-url]` should be defined as following:
 [apache-url]: LICENSE
 [notice-url]: NOTICE
 ```
+
+- [Using nightly Rust to compile contracts](./NIGHTLY_RUST_AND_CONTRACTS.md)
