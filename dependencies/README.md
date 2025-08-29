@@ -2,7 +2,7 @@
 
 ## Dependencies in [cosmwasm] repository
 
-<img alt="cosmwasm-dependencies" src="./cosmwasm-dependencies.svg" width="100%"/>
+<img alt="dep-cosmwasm" src="./dep-cosmwasm.svg" width="100%"/>
 
 ## Dependencies in [cw-multi-test] repository
 
