@@ -33,5 +33,6 @@ where `[apache-url]` and `[notice-url]` should be defined as following:
 [notice-url]: NOTICE
 ```
 
+- [Risk register](./RISK_REGISTER.md)
 - [Security policy](./SECURITY_POLICY.md)
 - [Using nightly Rust to compile contracts](./NIGHTLY_RUST_AND_CONTRACTS.md)
