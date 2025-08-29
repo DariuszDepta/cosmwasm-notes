@@ -138,9 +138,9 @@
     <!-- Legend -->
     <g transform="translate(660,100)">
         <text class="axis" x="0" y="-10">Severity</text>
-        <rect x="0" y="0"  width="20" height="20" class="level-low"/><text class="tick" x="28" y="15">Low</text>
-        <rect x="0" y="30" width="20" height="20" class="level-moderate"/><text class="tick" x="28" y="45">Moderate</text>
-        <rect x="0" y="60" width="20" height="20" class="level-significant"/><text class="tick" x="28" y="75">Significant</text>
-        <rect x="0" y="90" width="20" height="20" class="level-high"/><text class="tick" x="28" y="105">High</text>
+        <rect x="0" y="0"  width="20" height="20" class="level-low"/><text class="tick-label" x="28" y="15">Low</text>
+        <rect x="0" y="30" width="20" height="20" class="level-moderate"/><text class="tick-label" x="28" y="45">Moderate</text>
+        <rect x="0" y="60" width="20" height="20" class="level-significant"/><text class="tick-label" x="28" y="75">Significant</text>
+        <rect x="0" y="90" width="20" height="20" class="level-high"/><text class="tick-label" x="28" y="105">High</text>
     </g>
 </svg>
