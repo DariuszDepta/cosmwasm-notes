@@ -8,9 +8,11 @@
 
 <img alt="cosmwasm-dependencies" src="./cw-multi-test-dependencies.svg" width="100%"/>
 
-## All dependencies
+## Cross-repository dependencies
 
-<img alt="all-dependencies" src="./all-dependencies.svg" width="100%"/>
+<a href="./all-dependencies.svg" target="_blank" rel="noopener noreferrer">
+  <img alt="all-dependencies" src="./all-dependencies.svg" width="100%" />
+</a>
 
 [cosmwasm]: https://github.com/CosmWasm/cosmwasm
 [cw-multi-test]: https://github.com/CosmWasm/cw-multi-test
