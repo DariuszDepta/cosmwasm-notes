@@ -10,9 +10,7 @@
 
 ## Cross-repository dependencies
 
-<a href="./all-dependencies.svg" target="_blank" rel="noopener noreferrer">
-  <img alt="all-dependencies" src="./all-dependencies.svg" width="100%" />
-</a>
+<img alt="dep-all" src="./dep-all.svg" width="100%" />
 
 [cosmwasm]: https://github.com/CosmWasm/cosmwasm
 [cw-multi-test]: https://github.com/CosmWasm/cw-multi-test
