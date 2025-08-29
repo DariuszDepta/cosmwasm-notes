@@ -18,23 +18,6 @@
 [cw-plus]: https://github.com/CosmWasm/cw-plus
 [cw-multi-test]: https://github.com/CosmWasm/cw-multi-test
 
-## Security policy
-
-Each repository should include a file named **SECURITY.md** placed in the root directory.
-
-The contents of this file should be as follows:
-
-```text
-# Security Policy
-
-This repository is part of the **CosmWasm** stack.
-Please see the [Advisories] for its security policy.
-
-[Advisories]: https://github.com/CosmWasm/advisories/blob/main/SECURITY.md
-```
-
-Related issues: [\#1](https://github.com/DariuszDepta/hqcw/issues/1)
-
 ## Unified CHANGELOG
 
 Changelog SHOULD NOT contain `Unreleased` section.
@@ -62,4 +45,5 @@ where `[apache-url]` and `[notice-url]` should be defined as following:
 [notice-url]: NOTICE
 ```
 
+- [Security policy](./SECURITY_POLICY.md)
 - [Using nightly Rust to compile contracts](./NIGHTLY_RUST_AND_CONTRACTS.md)
