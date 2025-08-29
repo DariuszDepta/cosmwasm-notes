@@ -23,10 +23,10 @@ Checklist
 | [wasmvm]          |         |
 | [wasmd]           |         |
 | [serde-json-wasm] |         |
-| [cw-plus]         |         |
-| [cw-storage-plus] |         |
-| [cw-minus]        |         |
-| [cw-multi-test]   |         |
+| [cw-plus]         |    ✅    |
+| [cw-storage-plus] |    ✅    |
+| [cw-minus]        |    ✅    |
+| [cw-multi-test]   |    ✅    |
 
 [cosmwasm]: https://github.com/CosmWasm/cosmwasm
 [cw-minus]: https://github.com/CosmWasm/cw-minus
