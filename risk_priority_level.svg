@@ -1,0 +1,145 @@
+<svg width="760" height="660" viewBox="0 0 760 660" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .axis { font: 16px sans-serif; fill: #111; }
+            .tick { font: 14px sans-serif; fill: #333; }
+            .title { font: 20px sans-serif; font-weight: 600; fill: #111; }
+            .cell-label { font: 12px sans-serif; fill: #111; opacity: 0.7; }
+        </style>
+    </defs>
+
+    <!-- Title -->
+    <text class="title" x="380" y="30" text-anchor="middle">Priority level matrix</text>
+
+    <!-- Axes labels -->
+    <text class="axis" x="45" y="360" text-anchor="middle" transform="rotate(-90,45,360)">Probability</text>
+    <text class="axis" x="390" y="640" text-anchor="middle">Impact</text>
+
+    <!-- Axis ends (Low/High) -->
+    <text class="tick" x="90" y="585" text-anchor="end">Low</text>
+    <text class="tick" x="90" y="95" text-anchor="end">High</text>
+    <text class="tick" x="140" y="615">Low</text>
+    <text class="tick" x="640" y="615" text-anchor="end">High</text>
+
+    <!-- Grid origin and size -->
+    <!-- Grid top-left at (140, 80); cell size 100; 5x5 -->
+    <g id="grid" transform="translate(140,80)">
+        <!-- Column ticks -->
+        <g class="tick">
+            <text x="50"  y="520" text-anchor="middle">1</text>
+            <text x="150" y="520" text-anchor="middle">2</text>
+            <text x="250" y="520" text-anchor="middle">3</text>
+            <text x="350" y="520" text-anchor="middle">4</text>
+            <text x="450" y="520" text-anchor="middle">5</text>
+        </g>
+
+        <!-- Row ticks (1=Low at bottom, 5=High at top) -->
+        <g class="tick">
+            <text x="-10" y="490" text-anchor="end">1</text>
+            <text x="-10" y="390" text-anchor="end">2</text>
+            <text x="-10" y="290" text-anchor="end">3</text>
+            <text x="-10" y="190" text-anchor="end">4</text>
+            <text x="-10" y="90"  text-anchor="end">5</text>
+        </g>
+
+        <!-- Cells -->
+        <!-- Colors roughly follow PRINCE2-style heat map:
+             green (low), yellow (moderate), orange (significant), red (high/very high). -->
+
+        <!-- Row 5 (top, Probability=5) -->
+        <rect x="0"   y="0"   width="100" height="100" fill="#FFEB3B"/>  <!-- yellow -->
+        <rect x="100" y="0"   width="100" height="100" fill="#FFB74D"/>  <!-- orange -->
+        <rect x="200" y="0"   width="100" height="100" fill="#FFB74D"/>  <!-- orange -->
+        <rect x="300" y="0"   width="100" height="100" fill="#F44336"/>  <!-- red -->
+        <rect x="400" y="0"   width="100" height="100" fill="#F44336"/>  <!-- red -->
+
+        <!-- Row 4 (Probability=4) -->
+        <rect x="0"   y="100" width="100" height="100" fill="#FFF176"/>  <!-- yellow (lighter) -->
+        <rect x="100" y="100" width="100" height="100" fill="#FFEB3B"/>  <!-- yellow -->
+        <rect x="200" y="100" width="100" height="100" fill="#FFB74D"/>  <!-- orange -->
+        <rect x="300" y="100" width="100" height="100" fill="#FFB74D"/>  <!-- orange -->
+        <rect x="400" y="100" width="100" height="100" fill="#F44336"/>  <!-- red -->
+
+        <!-- Row 3 (Probability=3) -->
+        <rect x="0"   y="200" width="100" height="100" fill="#8BC34A"/>  <!-- green -->
+        <rect x="100" y="200" width="100" height="100" fill="#FFF176"/>  <!-- yellow (lighter) -->
+        <rect x="200" y="200" width="100" height="100" fill="#FFEB3B"/>  <!-- yellow -->
+        <rect x="300" y="200" width="100" height="100" fill="#FFB74D"/>  <!-- orange -->
+        <rect x="400" y="200" width="100" height="100" fill="#FFB74D"/>  <!-- orange -->
+
+        <!-- Row 2 (Probability=2) -->
+        <rect x="0"   y="300" width="100" height="100" fill="#8BC34A"/>  <!-- green -->
+        <rect x="100" y="300" width="100" height="100" fill="#8BC34A"/>  <!-- green -->
+        <rect x="200" y="300" width="100" height="100" fill="#FFF176"/>  <!-- yellow (lighter) -->
+        <rect x="300" y="300" width="100" height="100" fill="#FFEB3B"/>  <!-- yellow -->
+        <rect x="400" y="300" width="100" height="100" fill="#FFB74D"/>  <!-- orange -->
+
+        <!-- Row 1 (bottom, Probability=1) -->
+        <rect x="0"   y="400" width="100" height="100" fill="#8BC34A"/>  <!-- green -->
+        <rect x="100" y="400" width="100" height="100" fill="#8BC34A"/>  <!-- green -->
+        <rect x="200" y="400" width="100" height="100" fill="#8BC34A"/>  <!-- green -->
+        <rect x="300" y="400" width="100" height="100" fill="#FFF176"/>  <!-- yellow (lighter) -->
+        <rect x="400" y="400" width="100" height="100" fill="#FFEB3B"/>  <!-- yellow -->
+
+        <!-- Grid lines -->
+        <g fill="none" stroke="#333" stroke-opacity="0.6" stroke-width="1">
+            <!-- verticals -->
+            <path d="M0,0 v500"/>
+            <path d="M100,0 v500"/>
+            <path d="M200,0 v500"/>
+            <path d="M300,0 v500"/>
+            <path d="M400,0 v500"/>
+            <path d="M500,0 v500"/>
+            <!-- horizontals -->
+            <path d="M0,0 h500"/>
+            <path d="M0,100 h500"/>
+            <path d="M0,200 h500"/>
+            <path d="M0,300 h500"/>
+            <path d="M0,400 h500"/>
+            <path d="M0,500 h500"/>
+        </g>
+
+        <!-- Optional cell labels (P,I) -->
+        <g class="cell-label">
+            <!-- y=0 -->
+            <text x="50"  y="55"  text-anchor="middle">P5,I1</text>
+            <text x="150" y="55"  text-anchor="middle">P5,I2</text>
+            <text x="250" y="55"  text-anchor="middle">P5,I3</text>
+            <text x="350" y="55"  text-anchor="middle">P5,I4</text>
+            <text x="450" y="55"  text-anchor="middle">P5,I5</text>
+            <!-- y=100 -->
+            <text x="50"  y="155" text-anchor="middle">P4,I1</text>
+            <text x="150" y="155" text-anchor="middle">P4,I2</text>
+            <text x="250" y="155" text-anchor="middle">P4,I3</text>
+            <text x="350" y="155" text-anchor="middle">P4,I4</text>
+            <text x="450" y="155" text-anchor="middle">P4,I5</text>
+            <!-- y=200 -->
+            <text x="50"  y="255" text-anchor="middle">P3,I1</text>
+            <text x="150" y="255" text-anchor="middle">P3,I2</text>
+            <text x="250" y="255" text-anchor="middle">P3,I3</text>
+            <text x="350" y="255" text-anchor="middle">P3,I4</text>
+            <text x="450" y="255" text-anchor="middle">P3,I5</text>
+            <!-- y=300 -->
+            <text x="50"  y="355" text-anchor="middle">P2,I1</text>
+            <text x="150" y="355" text-anchor="middle">P2,I2</text>
+            <text x="250" y="355" text-anchor="middle">P2,I3</text>
+            <text x="350" y="355" text-anchor="middle">P2,I4</text>
+            <text x="450" y="355" text-anchor="middle">P2,I5</text>
+            <!-- y=400 -->
+            <text x="50"  y="455" text-anchor="middle">P1,I1</text>
+            <text x="150" y="455" text-anchor="middle">P1,I2</text>
+            <text x="250" y="455" text-anchor="middle">P1,I3</text>
+            <text x="350" y="455" text-anchor="middle">P1,I4</text>
+            <text x="450" y="455" text-anchor="middle">P1,I5</text>
+        </g>
+    </g>
+
+    <!-- Legend -->
+    <g transform="translate(660,100)">
+        <text class="axis" x="0" y="-10">Severity</text>
+        <rect x="0" y="0" width="20" height="20" fill="#8BC34A"/><text class="tick" x="28" y="15">Low</text>
+        <rect x="0" y="30" width="20" height="20" fill="#FFF176"/><text class="tick" x="28" y="45">Moderate</text>
+        <rect x="0" y="60" width="20" height="20" fill="#FFB74D"/><text class="tick" x="28" y="75">Significant</text>
+        <rect x="0" y="90" width="20" height="20" fill="#F44336"/><text class="tick" x="28" y="105">High</text>
+    </g>
+</svg>
