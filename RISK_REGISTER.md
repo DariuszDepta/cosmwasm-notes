@@ -74,8 +74,7 @@ Options we have:
 
 ---
 
-> [!INFORMATION]
-> 
+> [!TIP]
 > Template for a new risk entry.
 
 ## CWR-XXX
@@ -110,8 +109,7 @@ Options we have:
 
 ---
 
-> [!INFORMATION]
-> 
+> [!TIP]
 > Reference matrix for priority levels 
  
 ![risk-priority-levels](./risk_priority_levels.svg)
