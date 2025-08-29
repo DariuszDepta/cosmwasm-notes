@@ -35,16 +35,16 @@ below the text above enclosed in one of the alerts:
 
 Checklist
 
-| Repository        | Updated |
-|-------------------|:-------:|
-| [cosmwasm]        |    ✅    |
-| [wasmvm]          |    ✅    |
-| [wasmd]           |    ✅    |
-| [serde-json-wasm] |    ✅    |
-| [cw-plus]         |    ✅    |
-| [cw-storage-plus] |    ✅    |
-| [cw-minus]        |    ✅    |
-| [cw-multi-test]   |    ✅    |
+| Repository        | Updated | Remarks |
+|-------------------|:-------:|:-------:|
+| [cosmwasm]        |    ✅    |         |
+| [wasmvm]          |    ✅    |         |
+| [wasmd]           |    ✅    |         |
+| [serde-json-wasm] |    ✅    |         |
+| [cw-plus]         |    ✅    |         |
+| [cw-storage-plus] |    ✅    |         |
+| [cw-minus]        |    ✅    |         |
+| [cw-multi-test]   |    ✅    |         |
 
 [cosmwasm]: https://github.com/CosmWasm/cosmwasm
 [cw-minus]: https://github.com/CosmWasm/cw-minus
