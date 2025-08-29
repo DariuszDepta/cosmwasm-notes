@@ -13,3 +13,4 @@
 - [Security policy](./SECURITY_POLICY.md)
 - [Using nightly Rust to compile contracts](./NIGHTLY_RUST_AND_CONTRACTS.md)
 - [Licensing](./LICENSING.md)
+- [Nightly Rust for compiling Smart Contracts](./NIGHTLY_RUST_AND_CONTRACTS.md)
