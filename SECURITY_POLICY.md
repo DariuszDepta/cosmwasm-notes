@@ -18,8 +18,8 @@ Please see the [Advisories] for its security policy.
 Checklist
 
 | Repository        | Updated |
-|-------------------|---------|
-| [cosmwasm]        |         |
+|-------------------|:-------:|
+| [cosmwasm]        |    ✅    |
 | [wasmvm]          |         |
 | [wasmd]           |         |
 | [serde-json-wasm] |         |
