@@ -1,8 +1,8 @@
 # Risk register
 
-|       Risk ID       | Date       | Priority level  | Status |
-|:-------------------:|------------|:---------------:|--------|
-| [CWR-001](#CWR-001) | 2025-07-04 | **10** (yellow) | Open   |
+|       Risk ID       | Date       |  Priority level   | Status |
+|:-------------------:|------------|:-----------------:|--------|
+| [CWR-001](#CWR-001) | 2025-07-04 | **10** (moderate) | Open   |
 
 ---
 
@@ -58,7 +58,7 @@ Deserialization error: "bulk memory support is not enabled (at offset 0x86f)"
 
 ### Priority level
   
-2 × 5 = **10** (yellow)
+2 × 5 = **10** (moderate)
 
 ### Mitigation notes
 
