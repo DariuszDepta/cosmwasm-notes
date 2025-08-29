@@ -6,7 +6,7 @@
 
 ## Dependencies in [cw-multi-test] repository
 
-<img alt="cosmwasm-dependencies" src="./cw-multi-test-dependencies.svg" width="100%"/>
+<img alt="dep-cw-multi-test" src="./dep-cw-multi-test.svg" width="100%"/>
 
 ## Cross-repository dependencies
 
