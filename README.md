@@ -9,6 +9,7 @@
 ---
 
 - [Maintenance scope](./MAINTENANCE_SCOPE.md)
+- [Dependencies](./dependencies)
 - [Risk register](./RISK_REGISTER.md)
 - [Security policy](./SECURITY_POLICY.md)
 - [Using nightly Rust to compile contracts](./NIGHTLY_RUST_AND_CONTRACTS.md)
