@@ -6,18 +6,6 @@
 > 
 > **All information is provided “as is” without any warranty or responsibility**. 
 
-## Maintenance scope
-
-| Repository      | Component |
-|-----------------|-----------|
-| [cosmwasm]      |           |
-| [cw-plus]       |           |
-| [cw-multi-test] |           |
-
-[cosmwasm]: https://github.com/CosmWasm/cosmwasm
-[cw-plus]: https://github.com/CosmWasm/cw-plus
-[cw-multi-test]: https://github.com/CosmWasm/cw-multi-test
-
 ## Unified CHANGELOG
 
 Changelog SHOULD NOT contain `Unreleased` section.
