@@ -109,4 +109,4 @@ Options we have:
 
 ---
 
-![risk-priority-level-matrix](./risk_priority_level.svg)
+![risk-priority-levels](./risk_priority_levels.svg)
