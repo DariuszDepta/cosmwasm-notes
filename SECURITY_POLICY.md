@@ -13,6 +13,24 @@ Please see the [Advisories] for its security policy.
 [Advisories]: https://github.com/CosmWasm/advisories/blob/main/SECURITY.md
 ```
 
+Additional information in **`SECURITY.md`** file (if really needed) should be placed
+below the text above enclosed in one of the alerts:
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
 ---
 
 Checklist
