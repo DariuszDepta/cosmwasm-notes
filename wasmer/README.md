@@ -97,3 +97,114 @@ Singlepass = fastest to compile, slowest to run.
 Cranelift = balanced (good trade-off).
 
 LLVM = slowest to compile, fastest to run.
+
+
+Assuming I compile WASM using Wasmer LLVM, is it possible to store the compiled code somewhere outside the memory? Can you find any working example if so?
+ChatGPT powiedział:
+
+Absolutely—yes, when using Wasmer with the LLVM compiler, it is possible to persist the compiled WebAssembly code outside of in-memory execution. The mechanism varies by language, but the functionality exists across Wasmer’s supported platforms. Below are working examples and details to guide you:
+
+Go Example (wasmer-go)
+
+With wasmer-go, you can compile a module, serialize it to bytes, and save it to disk—even when using LLVM:
+
+config := wasmer.NewConfig().UseLLVMCompiler().UseNativeEngine()
+engine := wasmer.NewEngineWithConfig(config)
+store := wasmer.NewStore(engine)
+module, _ := wasmer.NewModule(store, wasmBytes)
+
+// Serialize the module (includes compiled code)
+serialized, _ := module.Serialize()
+
+// Persist to disk
+ioutil.WriteFile("module_cache.bin", serialized, 0644)
+
+// Later, reload it
+data, _ := ioutil.ReadFile("module_cache.bin")
+module2, _ := wasmer.DeserializeModule(store, data)
+instance, _ := wasmer.NewInstance(module2, wasmer.NewImportObject())
+
+
+The important pieces:
+
+.UseLLVMCompiler() ensures the LLVM backend.
+
+.UseNativeEngine() enables the Native engine, which stores compiled code in a shared library format (.so, .dll, .dylib).
+
+Serialize() captures the compiled code, and DeserializeModule() allows reloading it later 
+Wasmer
+.
+
+Rust Example (wasmer-rust)
+
+In Rust, Wasmer supports AOT and serialized artifacts too:
+
+use wasmer::{Store, Module};
+
+let mut store = Store::default();
+let module = Module::new(&store, wasm_bytes)?;
+// Optionally, configure the engine to use LLVM if needed.
+
+// Serialize compiled module to bytes
+let serialized: Vec<u8> = module.serialize()?;
+
+// Save `serialized` to a file, later load using:
+let loaded_module = unsafe { Module::deserialize(&store, &serialized)? };
+// Instantiate as usual
+
+
+Here:
+
+Module::new compiles the module (using whichever backend is configured—LLVM if set).
+
+serialize() captures the compiled output.
+
+deserialize() reloads it, enabling reuse without recompilation 
+wasmerio.github.io
+.
+
+Additional Context: Caching Strategies
+
+Beyond simple serialization, more advanced caching techniques exist:
+
+In HPC contexts, tools built on Wasmer store LLVM-generated shared objects on disk, keyed by a hash of the original Wasm module. This ensures that recompilation only happens if the module changes 
+ar5iv
+.
+
+In Wasmer versions 4.2 and above, zero-copy deserialization dramatically speeds up module loading: load times can be cut by nearly half with this method 
+Reddit
+.
+
+Summary Table
+Feature	Supported?	How to Use It
+Persist LLVM-compiled code	Yes	Use Native engine + Serialize() / DeserializeModule() in Go; serialize() / deserialize() in Rust
+Store compiled code on disk	Yes	Write serialized bytes to file
+Zero-copy deserialization	Yes	Automatic in Wasmer 4.2+ for faster load times
+Shared-object caching	Yes (advanced)	Use hash-based filesystem storage in specialized setups
+Final Thoughts
+
+Yes, you can store compiled Wasm modules (even those compiled via LLVM) outside memory, for reuse across executions.
+
+Working examples:
+
+Go: Use .UseLLVMCompiler() + .UseNativeEngine() and serialize to and from disk 
+Wasmer
+.
+
+Rust: Call serialize() and deserialize() on Module, with the appropriate compiler configured 
+wasmerio.github.io
+.
+
+Advanced performance:
+
+Zero-copy deserialization in Wasmer 4.2+ can improve load times significantly 
+Reddit
+.
+
+Filesystem caching based on hash and shared-object artifacts is used effectively in HPC and edge scenarios 
+ar5iv
+.
+
+Let me know if you’d like code samples for other languages (like C/C++ or Python), or deeper insights into caching strategies and file formats!
+
+ChatGPT może popełniać błędy. Sprawdź ważne informacje. Zobacz Preferencje dotyczące plików cookie.
