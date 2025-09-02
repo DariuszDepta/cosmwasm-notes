@@ -208,3 +208,59 @@ ar5iv
 Let me know if you’d like code samples for other languages (like C/C++ or Python), or deeper insights into caching strategies and file formats!
 
 ChatGPT może popełniać błędy. Sprawdź ważne informacje. Zobacz Preferencje dotyczące plików cookie.
+
+
+Is it the same possible using wasmtime?
+ChatGPT powiedział:
+
+Great follow-up 👌 — Wasmtime (like Wasmer) also lets you persist compiled Wasm code outside of memory and reload it later, but the mechanism is a bit different.
+
+🔑 Key difference vs Wasmer
+
+In Wasmer, you call serialize() / deserialize() on a Module and optionally use the Native engine to emit .so/.dll/.dylib.
+
+In Wasmtime, you use the Module::serialize / Module::deserialize API.
+
+Wasmtime serializes the compiled code into a binary blob (engine-independent format).
+
+You can then save this blob to disk and later load it back without recompiling the original Wasm.
+
+🦀 Rust Example (Wasmtime)
+use wasmtime::{Engine, Module};
+
+fn main() -> anyhow::Result<()> {
+    // Use default engine (Cranelift by default; can configure LLVM)
+    let engine = Engine::default();
+
+    // Compile module
+    let wasm = std::fs::read("example.wasm")?;
+    let module = Module::new(&engine, &wasm)?;
+
+    // Serialize compiled module to bytes
+    let serialized = module.serialize()?;
+    std::fs::write("cached_module.cwasm", serialized)?;
+
+    // Later: reload without recompilation
+    let data = std::fs::read("cached_module.cwasm")?;
+    let module2 = unsafe { Module::deserialize(&engine, &data)? };
+
+    println!("Reloaded module successfully");
+    Ok(())
+}
+
+⚙️ Configuring Compiler Backend
+
+By default, Wasmtime uses Cranelift.
+But you can enable LLVM if you compile Wasmtime with the wasmtime-llvm feature enabled. Then the above serialization works the same way — the compiled code (LLVM-generated) is stored in the serialized blob.
+
+✅ Summary
+
+Yes, Wasmtime also supports persisting compiled Wasm outside memory.
+
+API: Module::serialize() → write to disk → Module::deserialize() later.
+
+Works with both Cranelift and LLVM backends (depending on how Wasmtime is built).
+
+The format is portable across runs of the same engine, but not guaranteed to be portable across different Wasmtime versions.
+
+👉 Do you want me to show you a working minimal example where the same .cwasm file is generated once, and then loaded multiple times without recompilation (with timing benchmarks)? That way you can see how much startup time it saves compared to recompiling.
