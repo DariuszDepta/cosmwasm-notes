@@ -494,3 +494,80 @@ The engine makes it machine-specific by compiling (JIT/AOT) to the host CPU arch
 In pure interpreters, the WASM binary stays in bytecode form, but those are slower and mostly used for constrained environments.
 
 ---
+
+Nice, so when the WASM portable binary in the AoT mode is precompiled, how these tools resuse the machine code binary and how it is executed?
+ChatGPT powiedział:
+
+Great follow-up — you’ve spotted an important detail 👍
+
+When a WASM engine does Ahead-of-Time (AoT) compilation, it has to bridge two worlds:
+
+The WASM module (portable, platform-neutral).
+
+The native machine code (architecture-specific, but still sandboxed and controlled by the engine).
+
+Let’s unpack how the machine code is produced, reused, and executed.
+
+🔄 1. AoT Compilation Step
+
+The engine (e.g. Wasmer AOT, Lucet, WasmEdge AOT, Wasmtime compile) translates the .wasm bytecode into a native object file or shared library (ELF on Linux, Mach-O on macOS, DLL on Windows).
+
+It embeds:
+
+The translated machine code for each WASM function.
+
+Some metadata: imports/exports, memory/table layouts, sandboxing checks, relocation info.
+
+This compiled artifact is sometimes called a “native bundle” or “precompiled cache”.
+
+📦 2. Storage & Reuse
+
+The AoT output can be saved to disk (like .so, .dylib, .dll, or custom cache files).
+
+Later runs of the same module can load this precompiled binary instead of re-compiling the .wasm again.
+
+Example:
+
+wasmtime compile foo.wasm -o foo.cwasm → produces a cached, precompiled module.
+
+At runtime: wasmtime run foo.cwasm → executes directly with no JIT cost.
+
+This is similar to how Java creates .class files and caches them in a JIT/AOT hybrid JVM.
+
+⚡ 3. Execution Phase
+
+When the precompiled artifact is loaded:
+
+The runtime still manages it. It doesn’t just hand execution to the OS like a normal binary, because:
+
+WASM requires sandboxing (no arbitrary syscalls, controlled memory access).
+
+Imports/exports must still be resolved (host functions, WASI syscalls, etc.).
+
+Memory and table objects must be allocated fresh for each instance.
+
+The runtime maps the compiled machine code into memory (like loading a .so file).
+
+Function pointers in the WASM module now point directly to native instructions.
+
+The runtime enforces checks (bounds checking, type safety, sandbox rules) while dispatching calls.
+
+So even though you get near-native speed, execution still happens inside the WASM runtime sandbox.
+
+🎯 Analogy
+
+Think of AoT-compiled WASM like this:
+
+.wasm = portable recipe card.
+
+AoT compiler = translates recipe into a ready-made meal kit for a specific kitchen (CPU).
+
+At runtime, the engine = the chef who unpacks the kit, sets up the safe kitchen space (sandbox), and serves the dish.
+
+🔑 Takeaway
+
+AoT compilation produces a host-architecture native binary, but it’s wrapped with metadata so the WASM runtime can manage and sandbox it.
+
+These precompiled artifacts can be cached and reused across multiple runs, saving startup cost.
+
+They still run under the control of the WASM runtime (not like a fully independent .exe).
