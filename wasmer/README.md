@@ -429,3 +429,68 @@ Actor/microservice platforms: WasmCloud, Spin, Ambient
 Language/plugin frameworks: Extism, WASIX, etc.
 
 If you have a particular use case in mind—say, embedded deployment, serverless apps, sandboxed execution, edge computing, or secure enclaves—I’d be happy to help narrow down the best fit or dive deeper into one of these options!
+
+---
+
+Am I right thinking that the WASM binary in all these tools is somehow compiled to the machine code specific for the architecture it is compiled on?
+ChatGPT powiedział:
+
+You’re exactly on the right track 👍
+
+But the answer depends a bit on what execution mode the WASM engine supports. Most modern WASM engines don’t just “interpret” the bytecode; they typically compile (at least partially) to native machine code for the host CPU. Let me break it down:
+
+🏗️ Execution Strategies in WASM Engines
+
+Interpreter
+
+The WASM bytecode is read and executed instruction by instruction (like a virtual machine).
+
+Examples: Wasm3, Wasmi, Fizzy.
+
+Super portable, but slower than native execution.
+
+JIT (Just-In-Time compilation)
+
+The WASM module is compiled into native machine code at runtime, optimized for the current CPU architecture.
+
+This is what Wasmtime, Wasmer (JIT mode), and WAMR (JIT) often do.
+
+Gives good performance, but introduces some runtime overhead.
+
+AOT (Ahead-Of-Time compilation)
+
+The WASM binary is compiled into a native binary before execution.
+
+Examples: Lucet, Wasmer (AOT mode), WasmEdge (AOT mode).
+
+You get very close to native speed, and you can ship precompiled binaries for a specific architecture.
+
+🔧 Architecture-Specific Code Generation
+
+Yes — when JIT or AOT is used, the WASM instructions are translated into machine code for the host CPU (x86-64, ARM64, RISC-V, etc.).
+
+The compiled code is therefore architecture-dependent.
+
+The original .wasm file itself is architecture-agnostic: the same .wasm module can run on ARM, x86, or RISC-V — the engine handles translation.
+
+📊 Example
+
+Take Wasmtime:
+
+Input: module.wasm (portable, platform-independent bytecode).
+
+At runtime:
+
+If using JIT, Wasmtime generates x86-64 instructions if running on a PC, or ARM64 instructions if on a Raspberry Pi.
+
+If using AOT, you can precompile with wasmtime compile and ship an ELF or Mach-O binary that runs natively.
+
+✅ So your intuition is correct:
+
+The WASM binary itself is portable.
+
+The engine makes it machine-specific by compiling (JIT/AOT) to the host CPU architecture.
+
+In pure interpreters, the WASM binary stays in bytecode form, but those are slower and mostly used for constrained environments.
+
+---
