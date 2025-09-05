@@ -264,3 +264,168 @@ Works with both Cranelift and LLVM backends (depending on how Wasmtime is built)
 The format is portable across runs of the same engine, but not guaranteed to be portable across different Wasmtime versions.
 
 👉 Do you want me to show you a working minimal example where the same .cwasm file is generated once, and then loaded multiple times without recompilation (with timing benchmarks)? That way you can see how much startup time it saves compared to recompiling.
+
+---
+There are several WASM engines like wasmer, wasmtime and wazero. Do you know any other doing the same?
+ChatGPT powiedział:
+
+You're absolutely right that Wasmer, Wasmtime, and Wazero are among the most prominent WebAssembly (WASM) engines—but there's a vibrant ecosystem beyond those. Here's a curated list of other notable WASM runtimes, interpreters, and execution environments you might find interesting:
+
+Standalone WebAssembly Runtimes & Interpreters
+
+From the GitHub "Awesome WebAssembly runtimes" list:
+
+Wasm3 – a super-lightweight and portable interpreter ideal for embedded and resource-constrained environments 
+GitHub
++1
+.
+
+WasmEdge (formerly SSVM) – a high-performance, extensible runtime for edge computing, cloud native, smart contracts, IoT, and more 
+GitHub
+arXiv
+.
+
+WAMR (WebAssembly Micro Runtime) – tailored for embedded systems and IoT with a tiny footprint; supports interpreter, JIT, and AOT modes 
+GitHub
+arXiv
+.
+
+Fizzy – a fast, deterministic interpreter written in C++ 
+GitHub
+gitplanet.com
+.
+
+Fuzm (if including experimental runtimes): GraalWasm – embedded in GraalVM; allows interpretation and compilation using Java technologies 
+GitHub
++1
+.
+
+Other standouts from the same list include:
+
+aWsm – an ahead-of-time (AoT) WASM compiler/runtime, focusing on speed and simplicity 
+GitHub
+.
+
+Wasmi – a lightweight interpreter designed for embedded use 
+GitHub
+.
+
+WasmVM – a standalone WASM process virtual machine 
+GitHub
+.
+
+WAVM – the WebAssembly Virtual Machine, historically one of the fastest, though its maintenance has slowed 
+GitHub
+Frank DENIS random thoughts.
+.
+
+Lunatic – an Erlang-inspired runtime for WebAssembly, using Rust/AssemblyScript 
+GitHub
++1
+.
+
+Extism – a framework for building apps with WASM across many languages (Rust, Go, .NET, Python, etc.) 
+GitHub
++1
+.
+
+Other Noteworthy or Specialized Runtimes
+
+Lucet – an edge-focused AOT-only WASM runtime from the Bytecode Alliance, previously used for Fastly's Compute@Edge 
+KodeKloud Notes
+LogRocket Blog
+.
+
+Chicory – a JVM-based (Java) WASM runtime 
+GitHub
+.
+
+The Wizard Research Engine (Virgil) – experimental research WASM engine 
+GitHub
++1
+.
+
+Beyond runtime types, there are also frameworks and tooling built around WASM:
+
+WasmCloud – actor-based platform for deploying WASM microservices with secure capabilities 
+KodeKloud Notes
+.
+
+Spin – application framework (from Fermyon) for building and running WASM microservices using Wasmtime 
+CNCF
+Reddit
+.
+
+WasmEx – fast, secure WASM + WASI runtime for Elixir 
+CNCF
+.
+
+Timecraft – runtime with sandboxing, task orchestration, and time-travel debugging for WASM 
+CNCF
+.
+
+Ambient – WASM + Rust + WebGPU runtime for high-performance 3D applications, games 
+CNCF
+.
+
+Extism (again, here noted for its plugin architecture) 
+CNCF
+.
+
+WASI X (WASIX) – a superset of the WASI system interface providing extended capabilities 
+CNCF
+.
+
+SpiderLightning, Homestar – other emerging runtimes and components in the WASM ecosystem 
+CNCF
+.
+
+At-a-Glance Reference Table
+Runtime / Framework	Primary Focus / Strength
+Wasm3	Lightweight interpreter for embedded use
+WasmEdge (SSVM)	Cloud-native, edge, serverless deployment
+WAMR	Micro-runtime for embedded/IoT (JIT/AOT support)
+Fizzy	Deterministic C++ interpreter
+GraalWasm	Java/GraalVM integration
+aWsm	Simplicity and AoT compilation
+Wasmi	Minimal interpreter for embedded systems
+WasmVM	Standalone WASM process VM
+WAVM	Historically high-performance VM (now less active)
+Lunatic	Erlang-inspired runtime with actor model
+Extism	Plugin framework across many languages
+Lucet	Fast AOT for edge computing
+WasmCloud	Actor-based microservices platform
+Spin	Dev-friendly WASM microservices deployment
+WasmEx	Elixir-focused runtime
+Timecraft	Time-travel + sandboxed WASM execution
+Ambient	High-performance game/3D engine
+WASIX / SpiderLightning / Homestar	Emerging experimental systems
+Insights from the Community
+
+On Reddit, one user highlights the growing support across ecosystems:
+
+"Without browsers, you need to use a WebAssembly runtime... there are also WebAssembly runtimes that only support WebAssembly, and offer additional features to run: wasmtime, wasmer, wasmedge, wasm3, iwasm, etc." 
+Reddit
+
+Another discusses Fermyon’s tooling:
+
+"At Fermyon... we are building Spin... applications that run in Spin and Fermyon Cloud consist of WebAssembly components... executed in a runtime built on top of Wasmtime…" 
+Reddit
+
+TL;DR Summary
+
+Beyond Wasmer, Wasmtime, and Wazero, the WASM ecosystem includes:
+
+Lightweight interpreters: Wasm3, Wasmi, Fizzy, aWsm
+
+Embedded/micro runtimes: WAMR, WasmEdge, WAVM
+
+Edge/AoT-specialized: Lucet
+
+Java integration: GraalWasm, Chicory
+
+Actor/microservice platforms: WasmCloud, Spin, Ambient
+
+Language/plugin frameworks: Extism, WASIX, etc.
+
+If you have a particular use case in mind—say, embedded deployment, serverless apps, sandboxed execution, edge computing, or secure enclaves—I’d be happy to help narrow down the best fit or dive deeper into one of these options!
