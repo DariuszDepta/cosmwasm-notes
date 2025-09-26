@@ -1,4 +1,4 @@
-# Maintainers guide
+# Maintenance guide
 
 ## Proposed table of contents for a maintainers guide
 
